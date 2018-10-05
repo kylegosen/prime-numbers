@@ -1,3 +1,5 @@
+package com.kylegosen.primenumbers;
+
 import java.util.List;
 
 public interface PrimeNumberGeneratorImpl {

@@ -1,8 +1,17 @@
+package com.kylegosen.primenumbers;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeNumberGenerator implements PrimeNumberGeneratorImpl {
 
+    /**
+     * Creates a list of prime numbers given a starting and ending value
+     *
+     * @param startingValue - number to start at (inclusive)
+     * @param endingValue - number to end at (inclusive)
+     * @return
+     */
     @Override
     public List<Integer> generate(int startingValue, int endingValue) {
         List<Integer> primeNumbers = new ArrayList<>();
@@ -16,6 +25,12 @@ public class PrimeNumberGenerator implements PrimeNumberGeneratorImpl {
         return primeNumbers;
     }
 
+    /**
+     * Determines whether a number is prime
+     *
+     * @param value - number in question
+     * @return - boolean (true if prime)
+     */
     @Override
     public boolean isPrime(int value) {
         // Special conditions
@@ -23,9 +38,7 @@ public class PrimeNumberGenerator implements PrimeNumberGeneratorImpl {
             return false;
         } else if(value == 2){
             return true;
-        }
-
-        if(value % 2 == 0){
+        } else if(value % 2 == 0){
             return false;
         }
 
